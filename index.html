@@ -237,7 +237,7 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="work-2014">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
                                     <p class="split-text">the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain range</p>
                                     <br>
@@ -253,7 +253,7 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="work-2016">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
                                     <p class="split-text">A topic sentence essentially tells readers what the rest of the paragraph is about. All sentences after it have to give more about it, or describe it in more detail. For example, if the topic sentence concerns the types of endangered species that live in the ocean</p>
                                     <br>
@@ -269,9 +269,9 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="work-2018">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">Descriptive writing calls for close attention to factual and sensory details: show, don't tell. Whether your subject is as small as a strawberry or as large as a fruit farm, you should begin by observing your subject closely.</p>
+                                    <p class="split-text">Descriptive writing calls for close attention to factual sensory details: show, don't tell. Whether your subject is as small as a strawberry or as large as a fruit farm, you should begin by observing your subject closely.</p>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="education-2014">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
                                     <p class="split-text">Next, go a little further afield with your list and associate your chosen topic or object with memories, opinions, and impressions. This list may give you some ideas for metaphors and possibly</p>
                                     <br>
@@ -306,7 +306,7 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="education-2016">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
                                     <p class="split-text">This will help you have more variety than just "buzzing be" verbs and keep the writing and imagery descriptive and active.</p>
                                     <br>
@@ -322,7 +322,7 @@
                                     <div class="line"></div>
                                 </div>
                                 <div class="year-content" id="education-2018">
-                                    <strong>DESIGN DIRECTOR</strong>
+                                    <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
                                     <p class="split-text">After your brainstorming phase, go through your list and decide which details and descriptions you like the most and are most significant.</p>
                                 </div>
@@ -453,6 +453,32 @@
                 observer.observe(element);
             });
         });
+    
+        // split content paragraph to multiple line div
+
+        let allYearContent = $(".year-content");
+        for(let i = 0; i < allYearContent.length; i++){
+            const yearContent = allYearContent[i];
+            const id = yearContent.getAttribute('id');
+            let totalId = "#" + id + " .split-text";
+            let targetId = "#" + id + " .lines-container";
+
+            let ahihi = $(targetId);
+            let lineSpans = splitParagraphToSpans(totalId, targetId);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let options = {
+                root: null,
+                rootMargin: "-50px -50px",
+                threshold: 0.05
+            };
+
+            let observer = new IntersectionObserver(beTouchingLines, options);
+            document.querySelectorAll(".lines-container").forEach(element => {
+                observer.observe(element);
+            });
+        });
 
         function beTouching(entries){
             entries.forEach(entry => {
@@ -466,43 +492,29 @@
                 }
             });
         }
-    
-        // 
 
-        let allYearContent = $(".year-content");
-        for(let i = 0; i < allYearContent.length; i++){
-            const yearContent = allYearContent[i];
-            const id = yearContent.getAttribute('id');
-            let totalId = "#" + id + " .split-text";
-            let targetId = "#" + id + " .lines-container";
-
-            let ahihi = $(targetId);
-            let lineSpans = splitParagraphToSpans(totalId, targetId);
-            let tl = new TimelineLite;
-            tl.staggerFrom(lineSpans, 0.4, {opacity: 0, x: 80, ease: Back.easeOut.config(1.7), x: 50}, 0.2);
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            let options = {
-                root: null,
-                rootMargin: "-100px -100px",
-                threshold: 0.05
-            };
-
-            let observer = new IntersectionObserver(beTouchingLines, options);
-            document.querySelectorAll(".lines-container").forEach(element => {
-                observer.observe(element);
-            });
+        // onhover 
+        $(".year-content-title").mouseover(function () {
+            $(this).addClass("font-size-18");
+            $(this).parent().find(".lines-container").addClass("display-visible");
         });
 
         function beTouchingLines(lineContainers) {
             lineContainers.forEach(lineContainer => {
+                let parentClassName = lineContainer.target.parentElement.className;
+                let parentId = lineContainer.target.parentElement.id;
+
+                let title = $("." + parentClassName + "#" + parentId + " .year-content-title");
+
                 if(lineContainer.isIntersecting) {
-                    console.log("intersec");
-                    let lineSpans = lineContainer.childNodes;
-                    console.log(lineSpans);
+                    title.removeClass("font-size-24");
+                    let spans = $("." + parentClassName + "#" + parentId + " .lines-container" + " div");
+                    lineContainer.target.classList.remove("hidden-slowly");
                     let tl = new TimelineLite;
-                    tl.staggerFrom(lineSpans, 0.4, {opacity: 0, x: 80, ease: Back.easeOut.config(1.7), x: 50}, 0.2);
+                    tl.staggerFrom(spans, 0.4, {opacity: 0, x: 80, ease: Back.easeOut.config(1.7), x: 50}, 0.2);
+                } else {
+                    title.addClass("font-size-24");
+                    lineContainer.target.classList.add("hidden-slowly");
                 }
             });
         }
@@ -538,7 +550,6 @@
             let text = paragraph.text().trim();
             let lines = splitIntoLines(text, textWidth);
             let lineSpans = [];
-            console.log(lines.length);
             for (let i = 0; i < lines.length; i++) {
                 const element = lines[i];
                 let span = $('<div></div>').text(element);

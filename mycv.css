@@ -19,8 +19,23 @@ body, html {
     background-color: linen;
 }
 
+.hidden-slowly {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .grey-color {
     color: grey;
+}
+
+.font-size-18 {
+    font-size: 18px !important;
+    transition: font-size 0.5s;
+}
+
+.display-visible {
+    display: initial !important;
+    transition: display 0.5s;
 }
 
 .page {
@@ -522,6 +537,24 @@ body, html {
 
 .page .content .right-container .right-content .timeline-container .timeline .year-content {
     padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+}
+
+.page .content .right-container .right-content .timeline-container .timeline .year-content .year-content-title {
+    font-size: 24px;
+    transition: font-size 0.5s;
+}
+
+.page .content .right-container .right-content .timeline-container .timeline .year-content .lines-container {
+    display: none;
+}
+
+.onhover-year-content-title {
+    font-size: 14px;
+    transition: font-size 0.5s;
 }
 
 .page .content .right-container .right-content .education {
