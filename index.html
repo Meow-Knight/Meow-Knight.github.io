@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>My CV</title>
+    <base href="/">
     <link rel="stylesheet" href="mycv.css">
+    <link rel="stylesheet" href="cv-responsive.css">
 </head>
 <body>
     <div class="page">
@@ -27,7 +29,7 @@
                     <div class="avatar-img">
                     </div>
                     <div class="personal-info">
-                        <table class="left-content-table">
+                        <table class="left-content-table" id="personal-table">
                             <tr><td colspan="2"><strong>PERSONAL</strong></td></tr>
                             <tr>
                                 <td>Name</td>
@@ -52,7 +54,7 @@
                         </table>
                     </div>
                     <div class="contact-info">
-                        <table class="left-content-table">
+                        <table class="left-content-table" id="contact-table">
                             <tr><td colspan="2"><strong>CONTACT</strong></td></tr>
                             <tr>
                                 <td>Mobile</td>
@@ -77,31 +79,31 @@
                         </table>
                     </div>
                     <div class="references-list">
-                        <table class="left-content-table">
+                        <table class="left-content-table" id="references-table">
                             <tr><td><strong>REFERENCES</strong></td></tr>
                             <tr>
                                 <td>something</td>
                             </tr>
                         </table>
                     </div>
-                    <div class="links-list">
+                    <div class="links-list" id="links-table">
                         <table class="left-content-table">
                             <tr><td colspan="2"><strong>LINKS</strong></td></tr>
                             <tr>
-                                <td>fb</td>
-                                <td>links</td>
+                                <td><a href="https://fb.com/huy.viet.7505" target="_blank"><img src="./img/facebook-cir.png" title="this links to my facebook"></a></td>
+                                <td>fb.com/huy.viet.7505</td>
                             </tr>
                             <tr>
-                                <td>ig</td>
-                                <td>links</td>
+                                <td><a href="https://instagram.com/meow._knight" target="_blank"><img src="./img/instagram-cir.png" title="this links to my instagram"></a></td>
+                                <td>instagram.com/meow._knight</td>
                             </tr>
                             <tr>
-                                <td>linkedin</td>
-                                <td>links</td>
+                                <td><a href="https://github.com/Meow-Knight" target="_blank"><img src="./img/github-cir.png" title="this links to my github"></a></td>
+                                <td>github.com/Meow-Knight</td>
                             </tr>
                             <tr>
-                                <td>twitter</td>
-                                <td>links</td>
+                                <td><img src="./img/gmail-cir.png" title="this links to my gmail"></td>
+                                <td>huyviet2582000@gmail.com</td>
                             </tr>
                         </table>
                     </div>
@@ -239,7 +241,7 @@
                                 <div class="year-content" id="work-2014">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain range</p>
+                                    <div class="split-text">the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain range</div>
                                     <br>
                                 </div>
                             </div>
@@ -255,7 +257,7 @@
                                 <div class="year-content" id="work-2016">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">A topic sentence essentially tells readers what the rest of the paragraph is about. All sentences after it have to give more about it, or describe it in more detail. For example, if the topic sentence concerns the types of endangered species that live in the ocean</p>
+                                    <div class="split-text">A topic sentence essentially tells readers what the rest of the paragraph is about. All sentences after it have to give more about it, or describe it in more detail. For example, if the topic sentence concerns the types of endangered species that live in the ocean</div>
                                     <br>
                                 </div>
                             </div>
@@ -271,7 +273,7 @@
                                 <div class="year-content" id="work-2018">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">Descriptive writing calls for close attention to factual sensory details: show, don't tell. Whether your subject is as small as a strawberry or as large as a fruit farm, you should begin by observing your subject closely.</p>
+                                    <div class="split-text">Descriptive writing calls for close attention to factual sensory details: show, don't tell. Whether your subject is as small as a strawberry or as large as a fruit farm, you should begin by observing your subject closely.</div>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +294,7 @@
                                 <div class="year-content" id="education-2014">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">Next, go a little further afield with your list and associate your chosen topic or object with memories, opinions, and impressions. This list may give you some ideas for metaphors and possibly</p>
+                                    <div class="split-text">Next, go a little further afield with your list and associate your chosen topic or object with memories, opinions, and impressions. This list may give you some ideas for metaphors and possibly</div>
                                     <br>
                                 </div>
                             </div>
@@ -308,7 +310,7 @@
                                 <div class="year-content" id="education-2016">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">This will help you have more variety than just "buzzing be" verbs and keep the writing and imagery descriptive and active.</p>
+                                    <div class="split-text">This will help you have more variety than just "buzzing be" verbs and keep the writing and imagery descriptive and active.</div>
                                     <br>
                                 </div>
                             </div>
@@ -324,7 +326,7 @@
                                 <div class="year-content" id="education-2018">
                                     <strong class="year-content-title">DESIGN DIRECTOR</strong>
                                     <div class="lines-container" style="width: 100%;"></div>
-                                    <p class="split-text">After your brainstorming phase, go through your list and decide which details and descriptions you like the most and are most significant.</p>
+                                    <div class="split-text">After your brainstorming phase, go through your list and decide which details and descriptions you like the most and are most significant.</div>
                                 </div>
                             </div>
                         </div>
@@ -401,27 +403,27 @@
                         <br>
                         <div class="hobbies-logo-container">
                             <div class="hobbies-logo" id="logo1">
-                                <i class="fas fa-wine-glass-alt fa-3x grey-color"></i>
+                                <i class="fas fa-wine-glass-alt fa-3x"></i>
                                 <div class="title">Cheers</div>
                             </div>
                             <div class="hobbies-logo" id="logo2">
-                                <i class="fas fa-quidditch fa-3x grey-color"></i>
+                                <i class="fas fa-quidditch fa-3x"></i>
                                 <div class="title">Imagine</div>
                             </div>
                             <div class="hobbies-logo" id="logo3">
-                                <i class="fas fa-chess-knight fa-3x grey-color"></i>
+                                <i class="fas fa-chess-knight fa-3x"></i>
                                 <div class="title">Chess</div>
                             </div>
                             <div class="hobbies-logo" id="logo4">
-                                <i class="fas fa-headphones fa-3x grey-color"></i>
+                                <i class="fas fa-headphones fa-3x"></i>
                                 <div class="title">Music</div>
                             </div>
                             <div class="hobbies-logo" id="logo5">
-                                <i class="fas fa-motorcycle fa-3x grey-color"></i>
+                                <i class="fas fa-motorcycle fa-3x"></i>
                                 <div class="title">Travel</div>
                             </div>
                             <div class="hobbies-logo" id="logo6">
-                                <i class="fas fa-theater-masks fa-3x grey-color"></i>
+                                <i class="fas fa-theater-masks fa-3x"></i>
                                 <div class="title">Comedy</div>
                             </div>
                         </div>
@@ -454,19 +456,10 @@
             });
         });
     
-        // split content paragraph to multiple line div
-
-        let allYearContent = $(".year-content");
-        for(let i = 0; i < allYearContent.length; i++){
-            const yearContent = allYearContent[i];
-            const id = yearContent.getAttribute('id');
-            let totalId = "#" + id + " .split-text";
-            let targetId = "#" + id + " .lines-container";
-
-            let ahihi = $(targetId);
-            let lineSpans = splitParagraphToSpans(totalId, targetId);
-        }
-
+        resizeSecondColumnTableOnLeft();
+        
+        window.onresize = resizeSecondColumnTableOnLeft;
+        
         document.addEventListener("DOMContentLoaded", () => {
             let options = {
                 root: null,
@@ -474,10 +467,27 @@
                 threshold: 0.05
             };
 
-            let observer = new IntersectionObserver(beTouchingLines, options);
-            document.querySelectorAll(".lines-container").forEach(element => {
+            let observer = new IntersectionObserver(newTouching, options);
+            document.querySelectorAll(".split-text").forEach(element => {
                 observer.observe(element);
             });
+        });
+
+        function newTouching(paragraphs) {
+            paragraphs.forEach(para => {
+                if(para.isIntersecting) {
+                    let parentId = para.target.parentElement.id;
+                    let thisElement = $("#" + parentId + " .split-text");
+                    let tl = new TimelineLite;
+                    tl.staggerFrom(thisElement, 1, {opacity: 0, x: 80, ease: Back.easeOut.config(2.7), x: 70}, 0.4);
+                }
+            })
+        }
+
+        // onhover 
+        $(".year-content-title").mouseover(function () {
+            $(this).addClass("font-size-18");
+            $(this).parent().find(".split-text").addClass("display-visible");
         });
 
         function beTouching(entries){
@@ -492,12 +502,22 @@
                 }
             });
         }
-
-        // onhover 
-        $(".year-content-title").mouseover(function () {
-            $(this).addClass("font-size-18");
-            $(this).parent().find(".lines-container").addClass("display-visible");
-        });
+        // style max width for td tag in left container
+        function resizeSecondColumnTableOnLeft() {
+            let contactLeftColumnWidth = $(".contact-info table tr td").eq(1).outerWidth();
+            let maxTableWidth = $(".left-content").outerWidth();
+            let contactSecondElementTable = $(".contact-info table tr td:nth-child(2)");
+            contactSecondElementTable.each(function () {
+                $(this).css("max-width", (maxTableWidth - contactLeftColumnWidth) + "px");
+            });
+            let linkLeftColumnWidth = $(".links-list table tr td").eq(1).outerWidth();
+            let linkSecondElementTable = $(".links-list table tr td:nth-child(2)");
+            linkSecondElementTable.each(function () {
+                $(this).css("max-width", (maxTableWidth - linkLeftColumnWidth) + "px");
+                $(this).css("text-overflow", "ellipsis");
+                $(this).css("word-wrap", "initial");
+            });
+        }
 
         function beTouchingLines(lineContainers) {
             lineContainers.forEach(lineContainer => {
@@ -519,47 +539,76 @@
             });
         }
 
-        function splitIntoLines(text, width){
-            let lines = [];
-            let spn = $('<span></span>').appendTo("body");
-            let words = text.split(" ");
-            let curLine = words[0];
-            let lastLine = null;
+        // function splitIntoLines(text, width){
+        //     let lines = [];
+        //     let spn = $('<span></span>').appendTo("body");
+        //     let words = text.split(" ");
+        //     let curLine = words[0];
+        //     let lastLine = null;
 
-            for(let i = 1; i < words.length; i++){
-                lastLine = curLine;
-                curLine = curLine.concat(" ", words[i]);
+        //     for(let i = 1; i < words.length; i++){
+        //         lastLine = curLine;
+        //         curLine = curLine.concat(" ", words[i]);
 
-                if(spn.text(curLine).width() > width){
-                    lines.push(lastLine);
-                    curLine = " ".concat(words[i]);
-                }
-            }
+        //         if(spn.text(curLine).width() > width){
+        //             lines.push(lastLine);
+        //             curLine = " ".concat(words[i]);
+        //         }
+        //     }
 
-            if(curLine.length > 0 && curLine !== words[words.length - 1]) {
-                lines.push(curLine);
-            }
+        //     if(curLine.length > 0 && curLine !== words[words.length - 1]) {
+        //         lines.push(curLine);
+        //     }
 
-            spn.remove();
-            return lines;
-        }
+        //     spn.remove();
+        //     return lines;
+        // }
 
-        function splitParagraphToSpans(id, insertDivId){
-            let paragraph = $(id);
-            let textWidth = paragraph.width();
-            let text = paragraph.text().trim();
-            let lines = splitIntoLines(text, textWidth);
-            let lineSpans = [];
-            for (let i = 0; i < lines.length; i++) {
-                const element = lines[i];
-                let span = $('<div></div>').text(element);
-                lineSpans.push(span);
-                $(insertDivId).append(span);
-            }
+        // function splitParagraphToSpans(id, insertDivId){
+        //     let paragraph = $(id);
+        //     let textWidth = paragraph.width();
+        //     let text = paragraph.text().trim();
+        //     let lines = splitIntoLines(text, textWidth);
+        //     let lineSpans = [];
+        //     for (let i = 0; i < lines.length; i++) {
+        //         const element = lines[i];
+        //         let span = $('<div></div>').text(element);
+        //         lineSpans.push(span);
+        //         $(insertDivId).append(span);
+        //     }
 
-            $(id).remove();
-            return lineSpans;
-        }
+        //     $(id).remove();
+        //     return lineSpans;
+        // }
+    
+        // split content paragraph to multiple line div
+        // let allYearContent = $(".year-content");
+        // for(let i = 0; i < allYearContent.length; i++){
+        //     const yearContent = allYearContent[i];
+        //     const id = yearContent.getAttribute('id');
+        //     let totalId = "#" + id + " .split-text";
+        //     let targetId = "#" + id + " .lines-container";
+
+        //     let ahihi = $(targetId);
+        //     let lineSpans = splitParagraphToSpans(totalId, targetId);
+        // }
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     let options = {
+        //         root: null,
+        //         rootMargin: "-50px -50px",
+        //         threshold: 0.05
+        //     };
+
+        //     let observer = new IntersectionObserver(beTouchingLines, options);
+        //     document.querySelectorAll(".lines-container").forEach(element => {
+        //         observer.observe(element);
+        //     });
+        // });
+
+        // let tl = new TimelineLite;
+        // let paragraph = $(".lines-container").eq(0);
+        // tl.staggerFrom(paragraph, 0.4, {opacity: 0, x: 80, ease: Back.easeOut.config(1.7), x: 50}, 0.2);
     </script>
     
 </body>
