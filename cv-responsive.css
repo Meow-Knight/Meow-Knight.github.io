@@ -14,3 +14,73 @@
         border-bottom-right-radius: 0px;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    .circle-container .circular {
+        flex-basis: 50%;
+        max-width: 100px;
+    }
+
+    .circle-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .circular {
+        flex-basis: 33%;
+    }
+
+    .circle-container li {
+        flex: 0 0 33.333333%;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    .page .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page .content .left-container {
+        width: 100%;
+    }
+
+    .page .content .left-container .left-content {
+        margin-top: 40px;
+    }
+
+    .page .content .left-container .left-content .avatar-img {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        padding-top: 0px;
+    }
+
+    .page .content .left-container .left-content .table-container li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .page .content .left-container .left-content .table-container li .left-content-table {
+        width: 60%;
+    }
+
+    .page .content .left-container .left-content .table-container li .to-right-size-table {
+        float: right;
+    }
+
+    .page .content .right-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .circle-container {
+        flex-direction: column;
+    }
+
+    .circle-container .circular {
+        max-width: 100px;
+    }
+}

@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+li {
+    list-style-type: none;
+}
+
 :root {
     --mydarkblue: rgb(2, 2, 48);
 }
@@ -148,6 +152,14 @@ body, html {
     margin-bottom: 30px;
 }
 
+.page .content .left-container .left-content .table-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .page .content .left-container table tr td:first-child{
     padding-right: 10px;
     border: 1px solid red;
@@ -159,7 +171,7 @@ body, html {
 }
 
 .page .content .left-container .left-content .personal-info {
-    width: 105%;
+    width: 100%;
 }
 
 .page .content .left-container .left-content .left-content-table {
@@ -214,14 +226,11 @@ body, html {
     margin-top: 30px;
 }
 
-/* Circle
-
-
-*/
 .circular{
     height: 100px;
     width: 100px;
     position: relative;
+    margin: auto;
 }
 .circular .inner, .circular .outer, .circular .circle{
     position: absolute;
