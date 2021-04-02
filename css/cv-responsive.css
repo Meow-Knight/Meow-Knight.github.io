@@ -84,3 +84,33 @@
         max-width: 100px;
     }
 }
+
+@media only screen and (max-width: 475px) {
+    .page .content .right-container .right-content .hobbies .hobbies-logo-container li{
+        flex-basis: 33%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .page .content .right-container .right-content .timeline-container .timeline .year-arrow {
+        display: none;
+    }
+
+    .page .content .right-container .right-content .timeline-container .timeline .mid-line {
+        width: 50px;
+        min-width: 50px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .page .content .left-container .left-content .avatar-img {
+        width: 200px;
+        height: 200px;
+    }
+} 
+
+@media only screen and (max-width: 300px) {
+    .page .header .name {
+        font-size: 30px;
+    }
+}
